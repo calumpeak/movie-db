@@ -135,12 +135,13 @@ const MovieSearchContainer = (WrappedComponent) => {
          * @param {Integer | String} page
          */
         findMovies (query, page = 1) {
-            query = encodeURIComponent(query);
-            this.setFetchState(true);
-            
             if (!query) {
                 return;
             }
+
+            query = encodeURIComponent(query);
+
+            this.setFetchState(true);
 
             fetch(`${endpoint}/search/movie?api_key=${apiKey}&query=${query}&page=${page}`)
                 .then(response => response.json())

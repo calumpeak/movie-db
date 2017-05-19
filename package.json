@@ -6,8 +6,7 @@
   "scripts": {
     "test": "NODE_PATH=./client mocha --require ignore-styles --report text --compilers js:babel-core/register --recursive test/setup.js test/**",
     "dev": "webpack-dashboard webpack-dev-server",
-    "build": "webpack -p",
-    "run": "npm run build && npm run start"
+    "build": "webpack -p"
   },
   "keywords": [
     "movie",

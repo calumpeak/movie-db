@@ -9,7 +9,7 @@ const config = require('./config');
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
     app: path.join(__dirname, 'client'),
-    build: path.join(__dirname, 'dist')
+    build: path.join(__dirname, 'view')
 };
 
 process.env.BABEL_ENV = TARGET;
