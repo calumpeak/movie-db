@@ -8,7 +8,7 @@ import 'whatwg-fetch';
 // TODO These should not be hardcoded and sit in a config
 const endpoint = 'https://api.themoviedb.org/3';
 const apiKey = 'b3a6cd74cc7dbda8893f381cddb579f1';
-
+const placeholderImage = 'images/placeholder.png';
 /**
  * Movie configuration object
  * See: https://developers.themoviedb.org/3/configuration
@@ -116,7 +116,7 @@ const MovieSearchContainer = (WrappedComponent) => {
 
                 forOwn(movieFieldMap, (val, key) => obj[val] = movie[key]);
 
-                obj.posterImg = `${images.base_url}w500${obj.posterImg}`;
+                obj.posterImg = obj.posterImg ? `${images.base_url}w500${obj.posterImg}` : placeholderImage;
                 
                 return obj;
             });
