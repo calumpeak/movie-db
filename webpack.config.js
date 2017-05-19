@@ -22,11 +22,9 @@ const common = {
         extensions: ['', '.js', ',jsx'],
         alias: {
             components: `${PATHS.app}/components`,
-            ducks: `${PATHS.app}/ducks`,
-            store: `${PATHS.app}/store`,
+            containers: `${PATHS.app}/containers`,
             utils: `${PATHS.app}/utils`,
-            constants: `${PATHS.app}/constants`,
-            styles: `${PATHS.app}/styles`
+            constants: `${PATHS.app}/constants`
         }
     },
     output: {
